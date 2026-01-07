@@ -1,0 +1,8 @@
+{
+    "model_type": "sklearn",
+    "original_name": "nb_baseline.pkl",
+    "f1_score": 0.613663894048292,
+    "accuracy": 0.9629629629629629,
+    "auc_score": 0.7724714883270726,
+    "combined_score": 0.6930676911876823
+}
