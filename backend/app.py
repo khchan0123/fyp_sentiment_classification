@@ -18,7 +18,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configure Gemini
-GENAI_API_KEY = "AIzaSyBwsjo7t1j6RglRs6CiSDkZuhdNAufBPY0"
+GENAI_API_KEY = "" # Highly sensitive
 GEMINI_MODEL_VERSION = 'gemini-2.5-flash-lite'
 GEMINI_MODEL_VERSION_2 = 'gemini-2.5-flash'
 SCORING_MODEL_NAME = "CNN" 
@@ -382,4 +382,5 @@ def explain_recommendations():
     
 if __name__ == '__main__':
     load_data()
+
     app.run(debug=True, port=5000)
