@@ -8,13 +8,13 @@ A Final Year Project that combats "Analysis Paralysis" and misleading Star Ratin
 
 ## Table of Contents
 
-* [Project Overview](https://www.google.com/search?q=%23-project-overview)
-* [Key Features](https://www.google.com/search?q=%23-key-features)
-* [System Architecture](https://www.google.com/search?q=%23-system-architecture)
-* [Usage Guide](https://www.google.com/search?q=%23-usage-guide)
-* [Model Performance](https://www.google.com/search?q=%23-model-performance)
-* [Project Structure](https://www.google.com/search?q=%23-project-structure)
-* [Future Roadmap](https://www.google.com/search?q=%23-future-roadmap)
+* [Project Overview](https://github.com/khchan0123/fyp_sentiment_classification/blob/main/README.md#project-overview)
+* [Key Features](https://github.com/khchan0123/fyp_sentiment_classification/blob/main/README.md#key-features)
+* [System Architecture](https://github.com/khchan0123/fyp_sentiment_classification/blob/main/README.md#system-architecture)
+* [Usage Guide](https://github.com/khchan0123/fyp_sentiment_classification/blob/main/README.md#usage-guide)
+* [Model Performance](https://github.com/khchan0123/fyp_sentiment_classification/blob/main/README.md#model-performance)
+* [Project Structure](https://github.com/khchan0123/fyp_sentiment_classification/blob/main/README.md#project-structure)
+* [Future Roadmap](https://github.com/khchan0123/fyp_sentiment_classification/blob/main/README.md#future-roadmap)
 
 ---
 
@@ -115,27 +115,39 @@ Validated via an Ablation Study comparing Pure CF vs. Hybrid.
 
 ```
 sentiment-hybrid-recsys/
-├── backend/
+├── backend/                  
 │   ├── app.py                 # Main Flask Application
 │   ├── recommender.py         # Hybrid Logic (SVD++ + Content)
 │   ├── sentiment.py           # Naive Bayes Inference Engine
-│   ├── models/                # Serialized Models (.pkl, .bin)
-│   │   ├── deployed_model.bin # Trained Sentiment Classifier
-│   │   └── tfidf.pkl          # Vectorizer
+│   ├── models/                # Serialized Models (Output from modelling)
+│   │   ├── deployed_model.bin # Final Trained Classifier
+│   │   └── tfidf.pkl          # Final Vectorizer
 │   ├── data/
-│   │   └── amazonindia.csv    # Dataset
+│   │   └── amazonindia.csv    
 │   └── requirements.txt
 │
-├── frontend/
+├── frontend/                 
 │   ├── src/
 │   │   ├── components/        # React Components
 │   │   │   ├── ProductCard.jsx
 │   │   │   ├── SafetyModal.jsx
 │   │   │   └── FloatingAI.jsx
-│   │   ├── services/          # API Calls (axios)
+│   │   ├── services/        
 │   │   └── App.js
 │   └── package.json
 │
+├── modelling/                
+│   ├── utils/
+│   │   ├── dataset.py   
+│   │   └── prepare_dl_data.py  
+│   ├── models/             
+│   │   ├── train_nb.py       
+│   │   ├── train_svm.py       
+│   │   ├── train_cnn.py      
+│   │   └── train_cnn-lstm.py    
+│   ├── amazonindia.csv
+│   ├── compare_and_deploy.py     # compare models and choose the best one
+│   └── eda_preprocessing.ipynb   # data understanding & preparation
 └── README.md
 
 ```
